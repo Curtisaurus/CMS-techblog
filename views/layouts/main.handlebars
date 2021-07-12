@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Tech Blog</title>
+  <link rel="stylesheet" href="./css/jass.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+</head>
+
+<body>
+  <header class="navbar">
+    <h1>Tech Blog</h1>
+    <ul class="nav-list">
+      <li>
+        <button class="no-button" href="/">Home</button>
+      </li>
+      <li>
+        <button class="no-button" href="#">Dashboard</button>
+      </li>
+      <li>
+        {{#if logged_in}}
+        <button class="no-button" id="logout">Logout</button>
+        {{else}}
+        <button class="no-button" href="/login">Login</button>
+        {{/if}}
+      </li>
+
+    </ul>
+  </header>
+
+  <div class="header-space"></div>
+
+  {{{ body }}}
+
+</body>
+
+</html>
