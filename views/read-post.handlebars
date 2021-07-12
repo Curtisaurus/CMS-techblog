@@ -1,0 +1,34 @@
+<div class="container card">
+  <div class="card-header">
+    <h4><a class="link" href="/post/{{id}}">{{title}}</a></h4>
+    <p>Posted by {{user.username}} on {{format_date createdAt}}</p>
+  </div>
+    <p class="card-body">{{content}}</p>
+</div>
+
+{{#if logged_in}}
+<div class="container card">
+  <h3 class="card-header"></h3>
+  <form class="card-body" id="comment-form">
+
+    <label class="form-label">Comment</label>
+    <input id="comment" name="comment-body" class="form-input" />
+
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</div>
+
+<script src="/js/comment.js"></script>
+{{/if}}
+
+
+{{#each comments as |comment|}}
+<div class="container card">
+  <h4 class="card-header"></h4>
+  <section class="card-body">
+    <p>{{comment.comment_text}}</p>
+    <br>
+    <p>-{{comment.user.name}}, {{format_date comment.createdAt}}</p>
+  </section>
+</div>
+{{/each}}
