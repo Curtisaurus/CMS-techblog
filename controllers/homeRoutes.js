@@ -106,7 +106,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 
     if (!postData) {
       res.status(404).json({ message: 'No post found with this id' });
-      return;
+      return; 
     }
 
     const post = postData.get({ plain: true });
@@ -118,7 +118,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
   }
 });
 
-router.get('/new', (req, res) => {
+router.get('/newpost', (req, res) => {
   res.render('newpost');
 });
 

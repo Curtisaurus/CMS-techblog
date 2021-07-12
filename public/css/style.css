@@ -38,10 +38,24 @@ header {
   font-size: 100%;
 }
 
-.post-link {
+.link {
   background: none;
   text-decoration: none;
   color: white;
   cursor: pointer;
 }
 
+.newpost-btn {
+  text-decoration: none;
+  background: #060e85;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  bottom: 1.5em;
+  right: 50vw;
+  border: black solid 1px;
+  padding: 0.3em;
+  box-shadow: black 2px 2px;
+}

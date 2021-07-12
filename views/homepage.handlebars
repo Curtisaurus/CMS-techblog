@@ -1,7 +1,7 @@
 {{#each posts as |post|}}
 <article class="container card">
   <div class="card-header flex-row justify-space-between">
-    <h3><a class="post-link" href="/post/{{post.id}}">{{post.title}}</a></h3>
+    <h3><a class="link" href="/post/{{post.id}}">{{post.title}}</a></h3>
     <p>Posted by {{user.name}} on {{post.createdAt}}</p>
   </div>
   <div class="card-body">
